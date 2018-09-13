@@ -1,0 +1,13 @@
+# Hostnames for devices 
+
+[dask-scheduler]
+scheduler
+[dask-scheduler:vars]
+ansible_user=pi
+ansible_ssh_pass=raspberry
+
+[dask-workers]
+worker[1:4]
+[clusternodes:vars]
+ansible_user=pi
+ansible_ssh_pass=raspberry

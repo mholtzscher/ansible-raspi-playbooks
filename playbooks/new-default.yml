@@ -9,7 +9,7 @@
     locale: "en_US.UTF-8"
     keyboard: "pc104"
     keyboard_layout: "us"
-    timezone: America/Los_Angeles
+    timezone: America/Chicago
     locale_options:
       # Disable Default (GB) Locale
       - regexp: "^#?en_GB.UTF-8 UTF-8"
@@ -23,12 +23,6 @@
     - name: hostname
       prompt: "please enter a hostname for your new device:"
       private: no
-    - name: wifi_ssid
-      prompt: "please enter the WiFi SSID for your new device:"
-      private: no
-    - name: wifi_password
-      prompt: "please enter the WiFi password for your new device:"
-      private: yes
 
   tasks:
 
@@ -38,10 +32,6 @@
 
     # Set Internationalization Options
     - include_tasks: ../tasks/internationalization.yml
-      tags: setup
-
-    # Set WiFi Options
-    - include_tasks: ../tasks/wifi.yml
       tags: setup
 
     # Run apt-get update and apt-get upgrade 
