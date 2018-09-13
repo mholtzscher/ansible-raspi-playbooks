@@ -2,7 +2,7 @@
 # semaphore / cli argument example for vars_prompt
 #   ex: ["-e","hostname='your_hostname' wifi_ssid='your_ssid' wifi_password='your_password'"] 
 ---
-- hosts: defaultdevices
+- hosts: cluster
   gather_facts: yes
   vars:
     wifi_country: "US"

@@ -11,3 +11,7 @@ worker[1:4]
 [clusternodes:vars]
 ansible_user=pi
 ansible_ssh_pass=raspberry
+
+[cluster:children]
+dask-scheduler
+dask-workers
