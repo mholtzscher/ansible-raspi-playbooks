@@ -1,0 +1,14 @@
+# ansible-playbook -i ~/ansible/hosts /playbooks/distribute_ssh_key.yml
+---
+- hosts: cluster
+  gather_facts: yes
+
+  tasks:
+
+      # Install Python Packages
+      - include_tasks: ../tasks/python_tools.yml
+        tags: python
+
+      # Install Python Packages
+      - include_tasks: ../tasks/pip.yml
+        tags: python

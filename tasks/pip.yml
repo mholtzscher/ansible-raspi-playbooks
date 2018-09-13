@@ -1,0 +1,5 @@
+# Upgrade apt packages
+- name: Install python packages from requirements.txt
+  pip: 
+    requirements: requirements.txt
+    executable: pip-3.6

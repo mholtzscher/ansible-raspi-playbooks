@@ -1,6 +1,6 @@
 # ansible-playbook -i ~/ansible/hosts /playbooks/distribute_ssh_key.yml
 ---
-- hosts: allpi
+- hosts: cluster
   gather_facts: yes
 
   tasks:
