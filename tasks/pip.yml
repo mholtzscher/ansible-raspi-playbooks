@@ -1,14 +1,11 @@
 - name: "Install Dask"
-    pip:
-      name: dask
-      executable: pip3
-
-- name: "Install Pandas"
-    pip:
-      name: pandas
-      executable: pip3
+  become: true
+  pip:
+    name: dask
+    executable: pip3.6
 
 - name: "Install Faust"
-    pip:
-      name: faust
-      executable: pip3
+  become: true
+  pip:
+    name: faust
+    executable: pip3.6
