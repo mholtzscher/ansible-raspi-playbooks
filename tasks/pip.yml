@@ -1,5 +1,14 @@
-# Upgrade apt packages
-- name: Install python packages from requirements.txt
-  pip: 
-    requirements: requirements.txt
-    executable: pip-3.6
+- name: "Install Dask"
+    pip:
+      name: dask
+      executable: pip3
+
+- name: "Install Pandas"
+    pip:
+      name: pandas
+      executable: pip3
+
+- name: "Install Faust"
+    pip:
+      name: faust
+      executable: pip3

@@ -1,9 +1,17 @@
-- name: Update repositories cache and install "build-essentials" package
+- name: Update repositories cache and install "build-essential" package
+  become: true
   apt:
-    name: build-essentials
+    name: build-essential
     update_cache: yes
 
 - name: Update repositories cache and install "python3" package
+  become: true
   apt:
     name: python3
+    update_cache: yes
+
+- name: Update repositories cache and install "python3-pip" package
+  become: true
+  apt:
+    name: python3-pip
     update_cache: yes
