@@ -1,0 +1,16 @@
+---
+- name: Reboot a host and wait for it to return
+  hosts: cluster
+  # remote_user: root
+  tasks:
+    - name: restart the system
+      shell: "sleep 5 & reboot"
+      async: 1
+      poll: 0
+
+    - name: wait for the system to reboot
+      wait_for_connection:
+        connect_timeout: 20
+        sleep: 5
+        delay: 5 
+        timeout: 60
