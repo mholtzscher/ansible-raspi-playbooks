@@ -1,12 +1,17 @@
-# Hostnames for devices 
+# Hostnames for devices
 
 [cluster]
 192.168.1.113
-192.168.1.179
 192.168.1.141
+192.168.1.179
 192.168.1.191
-192.168.1.248
 
-[cluster:vars]
-ansible_user=pi
-ansible_ssh_pass=raspberry
+# These are your kafka cluster nodes
+[kafka_servers]
+192.168.1.113 kafka_broker_id=1
+192.168.1.141 kafka_broker_id=2
+
+# These are your zookeeper cluster nodes
+[zk_servers]
+192.168.1.113 zk_id=1
+192.168.1.141 zk_id=2

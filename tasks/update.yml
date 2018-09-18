@@ -13,3 +13,8 @@
   become: yes
   apt: 
     upgrade=dist
+
+- name: "install java 8"
+  become: yes
+  apt: 
+    name: oracle-java8-jdk
